@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  let counter = 0;
+  //const [data, setData] = useState(0);
+  function updateData() {
+    counter++;
+    console.log(counter);
+    //setData(data + 1);
+  }
+  console.warn("______ ");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{counter}</h1>
+      <button onClick={updateData}>Update Data</button>
     </div>
   );
 }
